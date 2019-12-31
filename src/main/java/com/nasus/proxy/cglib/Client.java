@@ -1,7 +1,5 @@
 package com.nasus.proxy.cglib;
 
-import com.nasus.proxy.dynamic.Animal;
-
 /**
  * Project Name:review_java <br/>
  * Package Name:com.nasus.proxy.statics <br/>
