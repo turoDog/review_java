@@ -32,6 +32,7 @@ public class VariableScopeTest {
         num = 10;*/
 
         // 为什么不能改变？
+        // 参考：https://segmentfault.com/a/1190000021168146
         /*int num = 1;
         // 这一步只是声明了 lambda ，并没有执行
         Converter<Integer, String> s = (param) -> System.out.println(String.valueOf(param + num));
