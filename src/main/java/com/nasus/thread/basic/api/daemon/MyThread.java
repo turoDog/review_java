@@ -1,4 +1,4 @@
-package com.nasus.thread.basic.api;
+package com.nasus.thread.basic.api.daemon;
 
 /**
  * Project Name:review_java <br/>

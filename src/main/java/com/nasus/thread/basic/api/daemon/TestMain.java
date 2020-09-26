@@ -1,4 +1,4 @@
-package com.nasus.thread.basic.api;
+package com.nasus.thread.basic.api.daemon;
 
 /**
  * Project Name:review_java <br/>
@@ -11,7 +11,7 @@ public class TestMain {
 
     public static void main(String[] args) {
         MyThread myThread = new MyThread();
-        DaemonThread  daemonThread = new DaemonThread();
+        DaemonThread daemonThread = new DaemonThread();
 
         //带参构造方法给线程起名字
         Thread thread1 = new Thread(myThread, "一个优秀的废人");
