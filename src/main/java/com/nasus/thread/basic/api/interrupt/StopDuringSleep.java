@@ -1,4 +1,4 @@
-package com.nasus.thread.basic.api;
+package com.nasus.thread.basic.api.interrupt;
 
 /**
  * Project Name:review_java <br/>
@@ -15,7 +15,8 @@ public class StopDuringSleep implements Runnable {
         try {
             while (!Thread.currentThread().isInterrupted() && count < 1000) {
                 System.out.println("count = " + count++);
-                Thread.sleep(1000000);
+                // 子线程 sleep
+                Thread.sleep(10000);
             }
         } catch (InterruptedException e) {
             // 判断该线程的中断标志位状态
@@ -24,8 +25,8 @@ public class StopDuringSleep implements Runnable {
             System.out.println(Thread.currentThread().getState());
             // 再次中断
             Thread.currentThread().interrupt();
-            // 再次判断该线程的中断标志位状态
-            System.out.println(Thread.currentThread().isInterrupted());
+            // 判断该线程的中断标志位状态
+            //System.out.println(Thread.currentThread().isInterrupted());
             e.printStackTrace();
         }
     }
@@ -33,8 +34,10 @@ public class StopDuringSleep implements Runnable {
     public static void main(String[] args) throws InterruptedException {
         Thread thread = new Thread(new StopDuringSleep());
         thread.start();
+        // 主线程 sleep
         Thread.sleep(5);
         thread.interrupt();
+        System.out.println(thread.isInterrupted());
     }
 
 }
